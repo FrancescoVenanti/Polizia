@@ -7,6 +7,7 @@ using System.Web;
 
 namespace Polizia.Models
 {
+    //modello per la tabella Verbale
     public class Verbale
     {
 
@@ -15,6 +16,7 @@ namespace Polizia.Models
         [Required(ErrorMessage = "La data e' obbligatoria")]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        
         public DateTime DataViolazione { get; set; }
         [DisplayName("Indirizzo")]
         [Required(ErrorMessage = "l'indirizzo e' obbligatorio")]
@@ -39,6 +41,7 @@ namespace Polizia.Models
         public int DecurtamentoPunti { get; set; }
         public int idAnagrafica { get; set; }
         public int idViolazione { get; set; }
+        //ho aggiunto questi campi per avere piu informazioni in output
         public string NomeTrasgressore { get; set; }
         public string CognomeTrasgressore { get; set; }
         public string Violazione { get; set; }

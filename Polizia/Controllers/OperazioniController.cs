@@ -17,6 +17,7 @@ namespace Polizia.Controllers
             return View();
         }
 
+        //metodo per visualizzare i verbali con importo superiore a 400
         public ActionResult PiuDi400()
         {
             string connectionString = ConfigurationManager.ConnectionStrings["Polizia"].ToString();
@@ -61,6 +62,7 @@ namespace Polizia.Controllers
             return View(verbali);
         }
 
+        //metodo per visualizzare i verbali con decurtamento punti superiore a 10
         public ActionResult PiuDi10()
         {
             string connectionString = ConfigurationManager.ConnectionStrings["Polizia"].ToString();
@@ -105,6 +107,7 @@ namespace Polizia.Controllers
             return View(verbali);
         }
 
+        //metodo per visualizzare la somma dei punti decurtati per ogni trasgressore
         public ActionResult Punti()
         {
             string connectionString = ConfigurationManager.ConnectionStrings["Polizia"].ToString();
@@ -139,6 +142,7 @@ namespace Polizia.Controllers
             return View(puntiTrasgressori);
         }
 
+        //metodo per visualizzare il numero dei verbali per ogni trasgressore
         public ActionResult verbali()
         {
             string connectionString = ConfigurationManager.ConnectionStrings["Polizia"].ToString();

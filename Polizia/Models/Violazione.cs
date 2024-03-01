@@ -7,6 +7,7 @@ using System.Web;
 
 namespace Polizia.Models
 {
+    //modello per la tabella Violazione
     public class Violazione
     {
         public int Id { get; set; }

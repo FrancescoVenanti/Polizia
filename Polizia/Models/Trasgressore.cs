@@ -7,8 +7,10 @@ using System.Web;
 
 namespace Polizia.Models
 {
+    //modello per la tabella Trasgressore
     public class Trasgressore
     {
+        //gli htmlControl vengono utilizzati per dare un nome alla label e per esegure controlli su ogni campo
         public int IDAnagrafica { get; set; }
         [DisplayName("Cognome")]
         [Required(ErrorMessage = "Il Cognome è obbligatorio")]

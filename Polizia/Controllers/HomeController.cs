@@ -11,14 +11,18 @@ namespace Polizia.Controllers
 {
     public class HomeController : Controller
     {
+
+        // metodo per la visualizzazione della pagina iniziale
         public ActionResult Index()
         {
 
             return View();
         }
 
+        // metodo per la visualizzazione della pagina dei trasgressori
         public ActionResult Trasgressori()
         {
+            
             string connectionString = ConfigurationManager.ConnectionStrings["Polizia"].ToString();
             SqlConnection conn = new SqlConnection(connectionString);
 
@@ -58,6 +62,7 @@ namespace Polizia.Controllers
         {
             return View();
         }
+        // metodo per l'inserimento di un nuovo trasgressore
         [HttpPost]
         public ActionResult CreateTrasgressore(Trasgressore t)
         {
@@ -91,6 +96,7 @@ namespace Polizia.Controllers
         {
             return View();
         }
+        // metodo per la modifica di un trasgressore
         [HttpPost]
         public ActionResult EditTrasgressore(Trasgressore t)
         {
@@ -121,7 +127,7 @@ namespace Polizia.Controllers
             return RedirectToAction("Trasgressori");
         }
 
-
+        //metodo per la visualizzazione delle violazioni contestabili
         public ActionResult Violazioni()
         {
             string connectionString = ConfigurationManager.ConnectionStrings["Polizia"].ToString();
@@ -153,6 +159,7 @@ namespace Polizia.Controllers
             return View(violazioni);
         }
 
+        //metodo per la visualizzazione dei verbali
         public ActionResult Verbali()
         {
             string connectionString = ConfigurationManager.ConnectionStrings["Polizia"].ToString();
@@ -160,6 +167,8 @@ namespace Polizia.Controllers
             List<Verbale> verbali = new List<Verbale>();
             try
             {
+                // prendo descrizione violazione e nome e cognome da anagrafica
+
                 conn.Open();
                 string query = "SELECT v.*, tv.Descrizione, a.Nome, a.Cognome " +
                                "FROM Verbale v " +
@@ -200,6 +209,7 @@ namespace Polizia.Controllers
             return View();
         }
 
+        // metodo per l'inserimento di un nuovo verbale
         [HttpPost]
         public ActionResult CreateVerbale(Verbale v)
         {
