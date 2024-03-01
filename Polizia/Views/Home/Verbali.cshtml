@@ -4,12 +4,12 @@
     ViewBag.Title = "Verbali";
 }
 
-<h2>Verbali</h2>
+<h2 class="display-2">Verbali</h2>
 
 <p>
-    @Html.ActionLink("Create New", "CreateVerbale", new {}, new {@class="btn btn-primary"})
+    @Html.ActionLink("Crea nuovo verbale", "CreateVerbale", new {}, new {@class="btn btn-primary"})
 </p>
-<table class="table">
+<table class="table table-striped mt-4">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.idVerbale)
@@ -47,7 +47,6 @@
         <th>
             @Html.DisplayNameFor(model => model.Violazione)
         </th>
-        <th></th>
     </tr>
 
 @foreach (var item in Model) {
@@ -87,11 +86,6 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Violazione)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
         </td>
     </tr>
 }

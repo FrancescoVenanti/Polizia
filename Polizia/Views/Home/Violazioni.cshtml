@@ -7,7 +7,7 @@
 <h2>Violazioni</h2>
 
 
-<table class="table">
+<table class="table table-striped mt-4">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Descrizione)
@@ -15,20 +15,21 @@
         <th>
             @Html.DisplayNameFor(model => model.isContestabile)
         </th>
-        
+
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Descrizione)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.isContestabile)
-        </td>
-        
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descrizione)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.isContestabile)
+            </td>
+
+        </tr>
+    }
 
 </table>
 

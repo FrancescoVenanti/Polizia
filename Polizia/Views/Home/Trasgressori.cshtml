@@ -9,7 +9,7 @@
 <p>
     @Html.ActionLink("Inserisci nuovo trasgressore", "CreateTrasgressore",new { }, new {@class = "btn btn-primary"})
 </p>
-<table class="table">
+<table class="table table-striped mt-4">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.IDAnagrafica)
@@ -35,35 +35,36 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.IDAnagrafica)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Cognome)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nome)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Indirizzo)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Citta)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CAP)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Cod_Fisc)
-        </td>
-        <td>
-            @* todo: INSERIRE?
-            @Html.ActionLink("Modifica", "EditTrasgressore", new { /* id=item.PrimaryKey */ }) |
-        @Html.ActionLink("Elimina", "DeleteTrasgressore", new {  id=item.IDAnagrafica }, new {@class = "btn btn-outline-danger"})*@
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IDAnagrafica)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cognome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Indirizzo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Citta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CAP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cod_Fisc)
+            </td>
+            <td>
+                @* todo: INSERIRE?
+                        @Html.ActionLink("Modifica", "EditTrasgressore", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Elimina", "DeleteTrasgressore", new {  id=item.IDAnagrafica }, new {@class = "btn btn-outline-danger"})*@
+            </td>
+        </tr>
+    }
 
 </table>
