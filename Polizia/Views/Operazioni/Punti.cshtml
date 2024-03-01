@@ -1,0 +1,39 @@
+﻿@model IEnumerable<PuntiTrasgressore>
+
+@{
+    ViewBag.Title = "Punti";
+}
+
+<h2>Punti per persona</h2>
+
+@Html.ActionLink("Torna indietro", "Index", "Operazioni", new { @class = "btn btn-primary mt-3" })
+<table class="table table-striped mt-4">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NomeTrasgressore)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CognomeTrasgressore)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PuntiDecurtati)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeTrasgressore)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CognomeTrasgressore)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PuntiDecurtati)
+            </td>
+            
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,76 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+<h1 class="display-1 text-primary fw-bold">Polizia municipale</h1>
+<h2>Altre Operazioni</h2>
+<div class="row mt-5">
+
+    <div class="col-12 col-md-6 col-xl-3">
+        <div class="card h-100 position-relative">
+            <div class="card-header">
+                <h3>Verbali per trasgressore</h3>
+            </div>
+            <div class="mb-5">
+                <img src="~/Content/img/trasgressore2.jpg" alt="trasgressori" class="img-fluid" />
+            </div>
+            <div class="card-body">
+                <p class="position-absolute bottom-0 start-50 translate-middle-x ">
+                    @Html.ActionLink("Entra", "verbali", "Operazioni", new { @class = "btn btn-primary fs-4" })
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-xl-3">
+        <div class="card h-100 position-relative">
+            <div class="card-header">
+                <h3>Punti per trasgressore</h3>
+            </div>
+            <div class="mb-5">
+                <img src="~/Content/img/patente.jpg" alt="trasgressori" class="img-fluid" />
+            </div>
+            <div class="card-body">
+                <p class="position-absolute bottom-0 start-50 translate-middle-x ">
+                    @Html.ActionLink("Entra", "Punti", "Operazioni", new { @class = "btn btn-primary fs-4" })
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-xl-3">
+        <div class="card h-100 position-relative">
+            <div class="card-header">
+                <h3>Violazioni per piu di 10 punti</h3>
+            </div>
+            <div class="mb-5">
+                <img src="~/Content/img/meno10.jpg" alt="trasgressori" class="img-fluid" />
+            </div>
+            <div class="card-body">
+                <p class="position-absolute bottom-0 start-50 translate-middle-x ">
+                    @Html.ActionLink("Entra", "PiuDi10", "Operazioni", new { @class = "btn btn-primary fs-4" })
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-xl-3">
+        <div class="card h-100 position-relative">
+            <div class="card-header">
+                <h3>Violazioni per piu di 400 Euro</h3>
+            </div>
+            <div class="mb-5">
+                <img src="~/Content/img/soldi.jpg" alt="trasgressori" class="img-fluid" />
+            </div>
+            <div class="card-body">
+                <p class="position-absolute bottom-0 start-50 translate-middle-x ">
+                    @Html.ActionLink("Entra", "PiuDi400", "Operazioni", new { @class = "btn btn-primary fs-4" })
+                </p>
+            </div>
+        </div>
+    </div>
+
+</div>

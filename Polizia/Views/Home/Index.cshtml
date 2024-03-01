@@ -1,0 +1,74 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h1 class="display-1 text-primary fw-bold">Polizia municipale</h1>
+<div class="row mt-5">
+    
+    <div class="col-12 col-md-6 col-xl-3">
+        <div class="card h-100 position-relative">
+            <div class="card-header">
+                <h3>Trasgressori</h3>
+            </div>
+            <div class="mb-5">
+                <img src="~/Content/img/trasgressori.jpg" alt="trasgressori" class="img-fluid"/>
+            </div>
+            <div class="card-body">
+                <p class="position-absolute bottom-0 start-50 translate-middle-x">
+                    @Html.ActionLink("Vai a trasgressori", "Trasgressori", "Home", new { @class = "btn btn-primary" })
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-md-6 col-xl-3">
+        <div class="card h-100 position-relative">
+            <div class="card-header">
+                <h3>Violazioni Contestabili</h3>
+            </div>
+            <div class="mb-5">
+                <img src="~/Content/img/violazioni.jpg" alt="trasgressori" class="img-fluid" />
+            </div>
+            <div class="card-body">
+                <p class="position-absolute bottom-0 start-50 translate-middle-x">
+                    @Html.ActionLink("Vai a Violazioni", "Violazioni", "Home", new { @class = "btn btn-primary" })
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-md-6 col-xl-3">
+        <div class="card h-100 position-relative">
+            <div class="card-header">
+                <h3>Verbali</h3>
+            </div>
+            <div class="mb-5">
+                <img src="~/Content/img/verbale.jpg" alt="trasgressori" class="img-fluid" />
+            </div>
+            <div class="card-body">
+                <p class="position-absolute bottom-0 start-50 translate-middle-x">
+                    @Html.ActionLink("Vai a Verbali", "Verbali", "Home", new { @class = "btn btn-primary" })
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-md-6 col-xl-3">
+        <div class="card h-100 position-relative">
+            <div class="card-header">
+                <h3>Altre Operazioni</h3>
+            </div>
+            <div class="mb-5 p-3">
+                <img src="~/Content/img/more.jpg" alt="trasgressori" class="img-fluid" />
+            </div>
+            <div class="card-body">
+                <p class="position-absolute bottom-0 start-50 translate-middle-x">
+                    @Html.ActionLink("Vai a operazioni", "Index", "Operazioni", new { },new { @class = "btn btn-primary" })
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+

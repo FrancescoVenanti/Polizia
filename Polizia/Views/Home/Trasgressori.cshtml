@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Polizia.Models.Trasgressore>
+
+@{
+    ViewBag.Title = "Trasgressori";
+}
+
+<h2>Trasgressori</h2>
+
+<p>
+    @Html.ActionLink("Inserisci nuovo trasgressore", "CreateTrasgressore",new { }, new {@class = "btn btn-primary"})
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IDAnagrafica)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cognome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Indirizzo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Citta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CAP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cod_Fisc)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IDAnagrafica)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cognome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Indirizzo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Citta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CAP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cod_Fisc)
+        </td>
+        <td>
+            @* todo: INSERIRE?
+            @Html.ActionLink("Modifica", "EditTrasgressore", new { /* id=item.PrimaryKey */ }) |
+        @Html.ActionLink("Elimina", "DeleteTrasgressore", new {  id=item.IDAnagrafica }, new {@class = "btn btn-outline-danger"})*@
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,94 @@
+﻿@model IEnumerable<Polizia.Models.Verbale>
+
+@{
+    ViewBag.Title = "PiuDi400";
+}
+
+<h2>PiuDi400</h2>
+
+@Html.ActionLink("Torna indietro", "Index", "Operazioni", new { @class = "btn btn-primary mt-3" })
+<table class="table table-striped mt-4">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.idVerbale)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataViolazione)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IndirizzoViolazione)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NominativoAgente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataVerbale)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Importo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DecurtamentoPunti)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idAnagrafica)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idViolazione)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NomeTrasgressore)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CognomeTrasgressore)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Violazione)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.idVerbale)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataViolazione)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IndirizzoViolazione)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NominativoAgente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataVerbale)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Importo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DecurtamentoPunti)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.idAnagrafica)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.idViolazione)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeTrasgressore)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CognomeTrasgressore)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Violazione)
+            </td>
+
+        </tr>
+    }
+
+</table>
